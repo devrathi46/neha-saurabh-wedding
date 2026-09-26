@@ -7,7 +7,7 @@ function createWeddingRsvpForm() {
   const EVENTS = ['Haldi', 'Sangeet', 'Baraat, Varmala & Phere', 'Reception'];
 
   const form = FormApp.create('Saurabh & Neha · Wedding RSVP')
-    .setDescription('1–2 December 2026 · Classic Sapphire Ananta, Bundi')
+    .setDescription('10–11 December 2026 · Classic Sapphire Ananta, Bundi')
     .setConfirmationMessage("Thank you! We can't wait to celebrate with you in Bundi.")
     .setAllowResponseEdits(false)
     .setShowLinkToRespondAgain(false);
@@ -17,7 +17,7 @@ function createWeddingRsvpForm() {
   const guests = form.addListItem().setTitle('Number of guests')
     .setChoiceValues(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']).setRequired(true);
   const events = form.addCheckboxItem().setTitle('Events attending').setChoiceValues(EVENTS).setRequired(true);
-  const arrival = form.addTextItem().setTitle('Arrival date & time').setHelpText('e.g. 1 Dec, around 9 AM').setRequired(true);
+  const arrival = form.addTextItem().setTitle('Arrival date & time').setHelpText('e.g. 10 Dec, around 9 AM').setRequired(true);
   const message = form.addParagraphTextItem().setTitle('Message for the couple');
 
   const sheet = SpreadsheetApp.create('Saurabh & Neha · RSVP responses');

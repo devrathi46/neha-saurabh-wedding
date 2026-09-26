@@ -61,7 +61,7 @@ Make changes one small request at a time, and check each one in the local previe
 - "The tap to open is not intuitive, show some animation. Show me in local first."
 - "Once I reload the page and tap again, the page should start from the top"
 - "Remove venue from the event cards"
-- "Change the example arrival time to 1 Dec, around 9 AM"
+- "Change the example arrival time to 10 Dec, around 9 AM"
 
 ### 4. Publish
 
