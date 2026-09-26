@@ -1,0 +1,243 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>html,body{margin:0;background:transparent;width:1000px;height:1000px;overflow:hidden}svg{display:block}</style>
+</head><body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1000 1000">
+<defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#E8C56A"/><stop offset=".5" stop-color="#C39A3B"/><stop offset="1" stop-color="#9C7423"/>
+  </linearGradient>
+  <linearGradient id="goldV" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#9C7423"/><stop offset=".35" stop-color="#EBCB78"/><stop offset=".7" stop-color="#C39A3B"/><stop offset="1" stop-color="#8E6A1F"/>
+  </linearGradient>
+  <linearGradient id="maroon" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8E1030"/><stop offset="1" stop-color="#5E0B21"/>
+  </linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFDDE2"/><stop offset="1" stop-color="#87BCC6"/>
+  </linearGradient>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#F9E6C9" stop-opacity=".9"/>
+  </linearGradient>
+  <radialGradient id="petal" cx=".5" cy=".85" r=".9">
+    <stop offset="0" stop-color="#E9788C"/><stop offset=".55" stop-color="#F3A9B5"/><stop offset="1" stop-color="#FBDDE1"/>
+  </radialGradient>
+
+  <!-- five-petal blossom, centre at 0,0, radius ~38 -->
+  <g id="blossom">
+    <g fill="url(#petal)" stroke="#D9707F" stroke-width="1">
+      <path id="pt" d="M0 0C-20-6-30-30-14-42C-6-46 0-38 0-34C0-38 6-46 14-42C30-30 20-6 0 0Z"/>
+      <use href="#pt" transform="rotate(72)"/><use href="#pt" transform="rotate(144)"/>
+      <use href="#pt" transform="rotate(216)"/><use href="#pt" transform="rotate(288)"/>
+    </g>
+    <g stroke="#C95A6D" stroke-width=".8" fill="none" opacity=".7">
+      <path d="M0 -6V-28M0 -6L-9 -24M0 -6L9 -24" /><path d="M0 -6V-28M0 -6L-9 -24M0 -6L9 -24" transform="rotate(72)"/>
+      <path d="M0 -6V-28M0 -6L-9 -24M0 -6L9 -24" transform="rotate(144)"/><path d="M0 -6V-28M0 -6L-9 -24M0 -6L9 -24" transform="rotate(216)"/>
+      <path d="M0 -6V-28M0 -6L-9 -24M0 -6L9 -24" transform="rotate(288)"/>
+    </g>
+    <circle r="7" fill="#F2C84B"/>
+    <g stroke="#B8862B" stroke-width="1.2" stroke-linecap="round">
+      <path d="M0 0L-14-13M0 0L-4-18M0 0L9-16M0 0L16-6M0 0L13 10M0 0L0 16M0 0L-12 10"/>
+    </g>
+    <g fill="#B8862B"><circle cx="-14" cy="-13" r="2"/><circle cx="-4" cy="-18" r="2"/><circle cx="9" cy="-16" r="2"/><circle cx="16" cy="-6" r="2"/><circle cx="13" cy="10" r="2"/><circle cx="0" cy="16" r="2"/><circle cx="-12" cy="10" r="2"/></g>
+  </g>
+  <g id="bud">
+    <path d="M0 0C-8-6-9-20 0-28C9-20 8-6 0 0Z" fill="#EE8DA0" stroke="#D9707F" stroke-width=".9"/>
+    <path d="M0 0C-4 -5 -4 -14 0 -19" fill="none" stroke="#C95A6D" stroke-width=".8"/>
+    <path d="M-5 2C-8-3-6-8-2-6M5 2C8-3 6-8 2-6" fill="#7EA36B" stroke="#4F7A48" stroke-width=".8"/>
+  </g>
+  <g id="leaf">
+    <path d="M0 0C10-14 34-18 54 0C34 18 10 14 0 0Z" fill="#7FA56C" stroke="#4E7745" stroke-width="1"/>
+    <path d="M0 0C20 0 36-1 54 0M14 0L26-9M14 0L26 9M28 0L40-6M28 0L40 6" fill="none" stroke="#4E7745" stroke-width=".9"/>
+    <path d="M4 0C14-8 28-11 42-6C30-8 16-4 4 0Z" fill="#A5C58F" opacity=".7"/>
+  </g>
+
+  <!-- peacock eye feather, pointing up from origin, length ~180 -->
+  <g id="feather">
+    <path d="M0 0C-3-60-6-110 0-170C6-110 3-60 0 0Z" fill="none" stroke="#2C7A57" stroke-width="1.5"/>
+    <path d="M0-170C-30-160-38-118-20-96C-8-82 8-82 20-96C38-118 30-160 0-170Z" fill="#2E8B6A" stroke="#1E5E45" stroke-width="1"/>
+    <path d="M0-160C-22-150-27-120-15-103C-6-93 6-93 15-103C27-120 22-150 0-160Z" fill="#C9A23A"/>
+    <ellipse cx="0" cy="-118" rx="14" ry="19" fill="#1D4E96"/>
+    <ellipse cx="0" cy="-118" rx="7" ry="11" fill="#12A0A8"/>
+    <ellipse cx="0" cy="-116" rx="3.2" ry="5.5" fill="#0F2E63"/>
+    <path d="M-16-140C-30-120-30-100-14-90M16-140C30-120 30-100 14-90" stroke="#2C7A57" stroke-width=".9" fill="none"/>
+  </g>
+</defs>
+
+<!-- ===================== BUNDI SCENE (inside the arch, bottom) ===================== -->
+<g id="scene">
+  <clipPath id="sceneClip"><rect x="205" y="700" width="590" height="175"/></clipPath>
+  <g clip-path="url(#sceneClip)">
+    <rect x="205" y="700" width="590" height="175" fill="url(#sky)"/>
+    <!-- Aravalli hills -->
+    <path d="M205 790C250 758 290 748 330 760C370 730 400 726 440 748C480 730 520 736 560 756C620 736 680 744 720 764C750 752 775 756 795 764V820H205Z" fill="#B4C4B0" opacity=".85"/>
+    <path d="M205 800C260 776 320 782 380 794C450 770 520 776 600 792C670 774 740 780 795 794V830H205Z" fill="#94AE8E" opacity=".9"/>
+    <!-- Taragarh-style fort/palace on the ridge -->
+    <g id="palace" transform="translate(300 0)">
+      <path d="M50 806V770H68V754H82V770H98V750H112V770H130V752H144V770H162V756H176V770H194V806Z" fill="#EAD8B3" stroke="#B89658" stroke-width="1"/>
+      <path d="M36 812V782H210V812Z" fill="#F3E6C8" stroke="#B89658" stroke-width="1"/>
+      <g fill="#C9A96A"><path d="M60 800V788Q66 780 72 788V800Z"/><path d="M92 800V788Q98 780 104 788V800Z"/><path d="M124 800V788Q130 780 136 788V800Z"/><path d="M156 800V788Q162 780 168 788V800Z"/><path d="M188 800V788Q194 780 200 788V800Z"/></g>
+      <path d="M69 754Q75 734 81 754Z" fill="#F3E6C8" stroke="#B89658" stroke-width=".8"/>
+      <path d="M113 750Q119 728 125 750Z" fill="#F3E6C8" stroke="#B89658" stroke-width=".8"/>
+      <path d="M145 752Q151 732 157 752Z" fill="#F3E6C8" stroke="#B89658" stroke-width=".8"/>
+      <path d="M22 812V790H36V812ZM210 812V790H224V812Z" fill="#EAD8B3" stroke="#B89658" stroke-width=".8"/>
+      <path d="M22 790Q29 776 36 790ZM210 790Q217 776 224 790Z" fill="#F3E6C8" stroke="#B89658" stroke-width=".8"/>
+    </g>
+    <!-- trees -->
+    <g fill="#6E8F5E"><ellipse cx="262" cy="806" rx="16" ry="20"/><ellipse cx="288" cy="810" rx="12" ry="15"/><ellipse cx="545" cy="808" rx="13" ry="17"/></g>
+    <!-- chhatri (pavilion) on the ghat, right -->
+    <g id="chhatri" transform="translate(608 0)">
+      <path d="M18 728Q60 682 102 728Z" fill="#F3E6C8" stroke="#B89658" stroke-width="1.2"/>
+      <path d="M58 690V678M52 678H68" stroke="#B89658" stroke-width="1.5"/><circle cx="60" cy="676" r="3" fill="#C39A3B"/>
+      <path d="M16 728H104V736H16Z" fill="#EAD8B3" stroke="#B89658" stroke-width="1"/>
+      <g fill="#EAD8B3" stroke="#B89658" stroke-width="1"><rect x="20" y="736" width="8" height="52"/><rect x="42" y="736" width="8" height="52"/><rect x="70" y="736" width="8" height="52"/><rect x="92" y="736" width="8" height="52"/></g>
+      <g fill="none" stroke="#B89658" stroke-width="1"><path d="M28 736Q35 752 42 736M50 736Q60 756 70 736M78 736Q85 752 92 736"/></g>
+      <path d="M8 788H112V798H8Z" fill="#EAD8B3" stroke="#B89658" stroke-width="1"/>
+      <path d="M2 798H118V808H2Z" fill="#E2CDA0" stroke="#B89658" stroke-width="1"/>
+      <path d="M-6 808H126V818H-6Z" fill="#DCC48E" stroke="#B89658" stroke-width="1"/>
+    </g>
+    <!-- lake -->
+    <rect x="205" y="812" width="590" height="70" fill="url(#water)"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="1.3" opacity=".7">
+      <path d="M240 828H330M360 838H470M500 826H590M280 850H400M440 858H560M600 846H690M660 866H770M230 866H300"/>
+    </g>
+    <!-- reflections -->
+    <g opacity=".35"><rect x="330" y="814" width="170" height="10" fill="#EAD8B3"/><rect x="620" y="820" width="90" height="22" fill="#EAD8B3"/></g>
+    <!-- lotus on water -->
+    <g transform="translate(455 850)"><ellipse rx="26" ry="5" fill="#5F8F5C" opacity=".8"/><path d="M0-3C-8-8-8-20 0-26C8-20 8-8 0-3Z" fill="#EE8DA0"/><path d="M-4-3C-16-6-18-16-12-20C-6-16-3-10-4-3ZM4-3C16-6 18-16 12-20C6-16 3-10 4-3Z" fill="#F4A9B7"/></g>
+  </g>
+</g>
+
+<!-- ===================== ARCH ===================== -->
+<g id="arch" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- outer & inner cusped jharokha outline, drawn once and mirrored -->
+  <g id="halfArch">
+    <path d="M500 118C468 160 428 168 396 196C372 217 372 232 350 252C330 270 312 268 292 296C278 316 282 336 264 356C250 372 236 372 226 400C216 430 224 452 214 474 L214 880"
+          stroke="url(#gold)" stroke-width="9"/>
+    <path d="M500 142C472 178 438 186 410 208C390 224 388 240 366 262C344 282 326 284 310 306C298 324 304 342 286 362C272 378 258 382 250 410C244 434 250 452 242 474 L242 700"
+          stroke="url(#gold)" stroke-width="3.5" opacity=".95"/>
+    <!-- fine scallop dots along the inner edge -->
+    <g fill="#D8B25A"><circle cx="440" cy="190" r="3"/><circle cx="390" cy="236" r="3"/><circle cx="342" cy="282" r="3"/><circle cx="296" cy="336" r="3"/><circle cx="258" cy="396" r="3"/></g>
+  </g>
+  <use href="#halfArch" transform="translate(1000 0) scale(-1 1)"/>
+
+  <!-- finial -->
+  <g transform="translate(500 0)">
+    <path d="M0 118V90M0 90C-12 84-14 68 0 56C14 68 12 84 0 90Z" stroke="url(#gold)" stroke-width="5" fill="#E5C266"/>
+    <path d="M0 56V38" stroke="url(#gold)" stroke-width="4"/>
+    <path d="M-14 62C-24 56-26 44-16 38M14 62C24 56 26 44 16 38" stroke="url(#gold)" stroke-width="4"/>
+    <circle cx="0" cy="34" r="5" fill="#E5C266" stroke="#B8893B" stroke-width="1.5"/>
+  </g>
+
+  <!-- pillars -->
+  <g id="pillar">
+    <rect x="196" y="500" width="36" height="366" fill="url(#goldV)" stroke="#8E6A1F" stroke-width="1.5"/>
+    <g fill="none" stroke="#8E6A1F" stroke-width="1" opacity=".7"><path d="M206 520V850M214 520V850M222 520V850"/></g>
+    <!-- capital -->
+    <path d="M186 500H242V486H232L236 470H192L196 486H186Z" fill="url(#goldV)" stroke="#8E6A1F" stroke-width="1.5"/>
+    <path d="M190 470Q214 446 238 470Z" fill="url(#goldV)" stroke="#8E6A1F" stroke-width="1.5"/>
+    <path d="M196 456C190 440 196 430 214 424C232 430 238 440 232 456" fill="#E5C266" stroke="#8E6A1F" stroke-width="1.2"/>
+    <circle cx="214" cy="440" r="5" fill="#B8893B"/>
+    <!-- ring & base -->
+    <rect x="190" y="600" width="48" height="10" rx="4" fill="url(#goldV)" stroke="#8E6A1F" stroke-width="1.2"/>
+    <rect x="190" y="700" width="48" height="10" rx="4" fill="url(#goldV)" stroke="#8E6A1F" stroke-width="1.2"/>
+    <path d="M182 866H246V880H252V896H176V880H182Z" fill="url(#goldV)" stroke="#8E6A1F" stroke-width="1.5"/>
+  </g>
+  <use href="#pillar" transform="translate(1000 0) scale(-1 1)"/>
+  <!-- base rail -->
+  <path d="M252 892H748" stroke="url(#gold)" stroke-width="7"/>
+  <path d="M252 902H748" stroke="url(#gold)" stroke-width="2.5"/>
+</g>
+
+<!-- ===================== FLORALS ===================== -->
+<g id="floralsL">
+  <!-- upper-left cascade -->
+  <path d="M292 168C262 196 232 228 214 262C198 294 184 330 176 368" stroke="#6E8F5E" stroke-width="3" fill="none"/>
+  <use href="#leaf" transform="translate(292 168) rotate(-60) scale(.9)"/>
+  <use href="#leaf" transform="translate(270 190) rotate(-150) scale(.85)"/>
+  <use href="#leaf" transform="translate(240 222) rotate(-25) scale(.9)"/>
+  <use href="#leaf" transform="translate(222 254) rotate(-170) scale(.95)"/>
+  <use href="#leaf" transform="translate(204 300) rotate(-20) scale(.85)"/>
+  <use href="#leaf" transform="translate(190 340) rotate(140) scale(.85)"/>
+  <use href="#blossom" transform="translate(240 148) rotate(10) scale(1.05)"/>
+  <use href="#blossom" transform="translate(178 232) rotate(-14) scale(1.25)"/>
+  <use href="#blossom" transform="translate(276 118) rotate(30) scale(.75)"/>
+  <use href="#blossom" transform="translate(154 322) rotate(20) scale(.8)"/>
+  <use href="#bud" transform="translate(300 112) rotate(48)"/>
+  <use href="#bud" transform="translate(206 176) rotate(-40) scale(.9)"/>
+  <use href="#bud" transform="translate(196 368) rotate(-14) scale(.9)"/>
+  <use href="#bud" transform="translate(268 148) rotate(70) scale(.8)"/>
+</g>
+<g id="floralsR">
+  <!-- right mid cluster -->
+  <path d="M812 640C838 600 856 560 862 520C866 490 862 462 852 436" stroke="#6E8F5E" stroke-width="3" fill="none"/>
+  <use href="#leaf" transform="translate(812 640) rotate(-120) scale(.9)"/>
+  <use href="#leaf" transform="translate(826 612) rotate(-10) scale(.9)"/>
+  <use href="#leaf" transform="translate(840 578) rotate(-155) scale(.9)"/>
+  <use href="#leaf" transform="translate(856 540) rotate(-15) scale(.9)"/>
+  <use href="#leaf" transform="translate(864 500) rotate(-160) scale(.85)"/>
+  <use href="#leaf" transform="translate(860 462) rotate(-40) scale(.8)"/>
+  <use href="#blossom" transform="translate(836 500) rotate(0) scale(1.05)"/>
+  <use href="#blossom" transform="translate(862 588) rotate(25) scale(.9)"/>
+  <use href="#blossom" transform="translate(846 426) rotate(-10) scale(.7)"/>
+  <use href="#bud" transform="translate(872 446) rotate(30)"/>
+  <use href="#bud" transform="translate(884 548) rotate(70) scale(.9)"/>
+  <use href="#bud" transform="translate(866 626) rotate(110) scale(.8)"/>
+</g>
+
+<!-- ===================== PEACOCK ===================== -->
+<g id="peacock" transform="translate(300 808) scale(.84) translate(-300 -808)">
+  <!-- tail: a fan of eye-feathers trailing to the lower-left -->
+  <g transform="translate(236 770)">
+    <use href="#feather" transform="rotate(-150) scale(.72 .86)"/>
+    <use href="#feather" transform="rotate(-138) scale(.72 1.2)"/>
+    <use href="#feather" transform="rotate(-126) scale(.72 .92)"/>
+    <use href="#feather" transform="rotate(-114) scale(.72 1.3)"/>
+    <use href="#feather" transform="rotate(-102) scale(.72 1.0)"/>
+    <use href="#feather" transform="rotate(-91) scale(.72 1.18)"/>
+  </g>
+  <!-- rear coverts -->
+  <path d="M212 790C216 760 240 736 268 728L290 752C270 768 244 784 212 790Z" fill="#17605F" stroke="#124E4E" stroke-width="1.5"/>
+  <!-- body -->
+  <ellipse cx="292" cy="752" rx="64" ry="33" transform="rotate(-18 292 752)" fill="#1E7A78" stroke="#124E4E" stroke-width="1.5"/>
+  <path d="M250 758C268 738 292 730 322 732C300 748 282 762 250 772Z" fill="#2CA38F" opacity=".75"/>
+  <path d="M262 770C280 776 306 774 326 762" stroke="#12403F" stroke-width="1.4" fill="none" opacity=".5"/>
+  <!-- neck (S-curve) -->
+  <path d="M312 726C296 696 322 668 316 636C312 616 300 602 304 584C308 570 326 568 332 580C338 596 330 612 338 632C348 662 344 700 354 736Z" fill="#1C5DA8" stroke="#123E73" stroke-width="1.5"/>
+  <path d="M322 720C312 694 332 668 326 640C324 624 316 610 318 596C326 604 332 618 336 632C342 660 340 696 346 726Z" fill="#3E8FD0" opacity=".55"/>
+  <!-- head -->
+  <ellipse cx="318" cy="574" rx="14" ry="12" fill="#1C5DA8" stroke="#123E73" stroke-width="1.5"/>
+  <path d="M330 572L352 578L332 582Z" fill="#E7C15A" stroke="#B8893B" stroke-width="1"/>
+  <path d="M308 566Q314 560 322 565" stroke="#F5F1E4" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <circle cx="322" cy="571" r="2.6" fill="#0C1B33"/><circle cx="321" cy="570" r=".9" fill="#fff"/>
+  <path d="M310 563C308 548 302 540 296 534M316 562C316 546 314 536 312 526M322 563C324 548 328 538 332 530" stroke="#123E73" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <g fill="#1C5DA8" stroke="#0F2E63" stroke-width=".6"><circle cx="296" cy="533" r="3.6"/><circle cx="312" cy="525" r="3.6"/><circle cx="332" cy="529" r="3.6"/></g>
+  <!-- legs -->
+  <path d="M290 782V810M306 780V810M282 810H296M300 810H314" stroke="#8B5A2B" stroke-width="3" stroke-linecap="round"/>
+  <!-- foliage at base -->
+  <use href="#leaf" transform="translate(212 812) rotate(-92) scale(.8)"/>
+  <use href="#leaf" transform="translate(224 830) rotate(-40) scale(.85)"/>
+  <use href="#leaf" transform="translate(244 846) rotate(-8) scale(.85)"/>
+  <use href="#leaf" transform="translate(208 850) rotate(-150) scale(.75)"/>
+  <use href="#bud" transform="translate(262 852) rotate(20) scale(.9)"/>
+  <use href="#blossom" transform="translate(236 800) scale(.55)"/>
+</g>
+
+<!-- ===================== MONOGRAM N + S ===================== -->
+<g id="monogram" font-family="'Cormorant Garamond',Georgia,serif" font-weight="700" transform="translate(500 446) scale(.82) translate(-494 -495)">
+  <text x="368" y="560" font-size="340" fill="url(#maroon)" stroke="#E2BE66" stroke-width="2" text-anchor="middle" font-style="italic" style="paint-order:stroke">N</text>
+  <text x="610" y="640" font-size="380" fill="url(#maroon)" stroke="#E2BE66" stroke-width="2" text-anchor="middle" font-style="italic" style="paint-order:stroke">S</text>
+  <!-- foliage and buds tucked between the letters -->
+  <path d="M478 470C500 500 510 540 506 590" stroke="#6E8F5E" stroke-width="2.5" fill="none"/>
+  <use href="#leaf" transform="translate(500 560) rotate(-30) scale(.75)"/>
+  <use href="#leaf" transform="translate(494 520) rotate(-150) scale(.7)"/>
+  <use href="#leaf" transform="translate(486 488) rotate(-40) scale(.6)"/>
+  <use href="#bud" transform="translate(480 466) rotate(-10) scale(1.1)"/>
+  <use href="#bud" transform="translate(500 472) rotate(30) scale(.95)"/>
+</g>
+
+<!-- ===================== NAMES ===================== -->
+<text x="500" y="962" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-weight="700" font-size="42" letter-spacing="7" fill="#8E1030">NEHA &amp; SAURABH</text>
+</svg>
+</body></html>
